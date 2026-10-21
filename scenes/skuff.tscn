@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dpmhkyo14wbkp"]
+
+[ext_resource type="Script" uid="uid://bvt8o85dvtbdl" path="res://scripts/skuff.gd" id="1_5dpws"]
+[ext_resource type="Texture2D" uid="uid://bilnpsymymqlp" path="res://assets/hylle.png" id="1_7nbca"]
+[ext_resource type="Texture2D" uid="uid://n81qmki8hxdt" path="res://assets/bilde (1).png" id="3_5dpws"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5dpws"]
+size = Vector2(50, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dx0g6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7nbca")
+}],
+"loop": 1,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5dpws")
+}],
+"loop": 1,
+"name": &"open",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D" unique_id=1146183073]
+script = ExtResource("1_5dpws")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2068369663]
+z_index = 1
+shape = SubResource("RectangleShape2D_5dpws")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=61784501]
+sprite_frames = SubResource("SpriteFrames_dx0g6")
+animation = &"closed"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1603751842]
+
+[node name="Label" type="Label" parent="." unique_id=955627736]
+offset_left = -71.0
+offset_top = -22.0
+offset_right = 72.0
+offset_bottom = 1.0
+text = "Du fant en hvitløk!"

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bx13xavhmwl0e"]
+
+[ext_resource type="Script" uid="uid://d2yghhu4bjjje" path="res://scripts/dialogue.gd" id="1_jwyou"]
+
+[node name="DialoguePrototype" type="Control" unique_id=1740106620]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jwyou")
+
+[node name="Label" type="Label" parent="." unique_id=2141356179]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Heiheiheihehieiheiheiheiheiheieh"
+
+[node name="Timer" type="Timer" parent="." unique_id=1550076807]
+one_shot = true

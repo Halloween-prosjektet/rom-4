@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cccgs6gr5uf0k"]
+
+[ext_resource type="Script" uid="uid://buw1is3jkakb" path="res://assets/skufff.gd" id="1_0wxk8"]
+[ext_resource type="Texture2D" uid="uid://bilnpsymymqlp" path="res://assets/hylle.png" id="1_ixmjs"]
+[ext_resource type="Texture2D" uid="uid://dnfwqw6qnexuk" path="res://assets/banadog.jpg" id="2_0wxk8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1nbrg"]
+size = Vector2(50, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grjr4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ixmjs")
+}],
+"loop": 1,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0wxk8")
+}],
+"loop": 1,
+"name": &"open",
+"speed": 5.0
+}]
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=799846101]
+script = ExtResource("1_0wxk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=929526060]
+z_index = 1
+shape = SubResource("RectangleShape2D_1nbrg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=753116338]
+sprite_frames = SubResource("SpriteFrames_grjr4")
+animation = &"closed"

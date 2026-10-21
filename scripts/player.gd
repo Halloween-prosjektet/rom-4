@@ -3,11 +3,16 @@ extends CharacterBody2D
 
 const speed = 100
 var current_dir = "none"
+var can_move:bool = true
 
 
 func _physics_process(delta):
 	player_movement(delta)
+	if can_move:
+		$AnimatedSprite2D.play("front_idle")
+		return
 
+##player animations
 func player_movement(delta):
 	
 	if Input.is_action_pressed("ui_right"):
@@ -67,3 +72,5 @@ func play_anim(movement):
 		elif movement== 0:
 			anim.play("back_idle")
 		
+func _ready() -> void:
+	add_to_group("player")
