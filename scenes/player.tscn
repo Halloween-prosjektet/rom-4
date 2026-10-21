@@ -159,6 +159,7 @@ y_sort_enabled = true
 position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_u8vuu")
 animation = &"side_walk"
+frame_progress = 0.07617577
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2012625104]
 position = Vector2(0, 1)
