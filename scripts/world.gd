@@ -9,6 +9,7 @@ func _ready() -> void:
 	client = ControlRoomClient.new("ws://172.31.0.200:7321", 4)
 	#client = ControlRoomClient.new("ws://172.31.0.138:7321", 2)
 	add_child(client)
+	client.add_loading_screen()
 	# Koble signalene før run(), så ingen blir gått glipp av.
 	client.player_incoming.connect(_on_player_incoming)
 	client.player_left.connect(_on_player_left)
@@ -21,12 +22,6 @@ func _ready() -> void:
 func _on_player_incoming(username: String, _player_data: Variant) -> void:
 	player_name = username
 	print("Velkommen til rom 2, ", username)
-
-
-
-func start_playing() -> void:
-	client.start_game()
-
 
 
 func player_won() -> void:

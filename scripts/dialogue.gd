@@ -9,8 +9,13 @@ extends Control
 
 
 func _ready() -> void:
-	pass
+	timer.timeout.connect(animate_label)
+	
+	animate_label()
 
 
 func animate_label() -> void: 
-	pass
+	label.visible_characters += 1
+	
+	timer.start()
+	
