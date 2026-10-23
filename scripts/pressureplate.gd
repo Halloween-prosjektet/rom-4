@@ -4,7 +4,7 @@ extends Area2D
  
 func _ready() -> void:
 	print("Plate ready")
-	sprite.play("Off")
+	sprite.play("off")
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
  

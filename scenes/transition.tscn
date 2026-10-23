@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://dkbchdyyrqux0"]
+
+[ext_resource type="Script" uid="uid://b6wk74miwgors" path="res://transition.gd" id="1_rerct"]
+
+[sub_resource type="Animation" id="Animation_f0i4t"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_px735"]
+resource_name = "fade_to_black"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.16666667, -0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_rerct"]
+resource_name = "fade_to_normal"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.16666667, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xmi56"]
+_data = {
+&"RESET": SubResource("Animation_f0i4t"),
+&"fade_to_black": SubResource("Animation_px735"),
+&"fade_to_normal": SubResource("Animation_rerct")
+}
+
+[node name="Transition" type="CanvasLayer" unique_id=1702814310]
+script = ExtResource("1_rerct")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=296669303]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=914569209]
+root_node = NodePath("../ColorRect")
+libraries/ = SubResource("AnimationLibrary_xmi56")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

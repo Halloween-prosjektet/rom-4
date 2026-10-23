@@ -3,10 +3,15 @@ extends Node2D
 var client: ControlRoomClient
 var player_name := ""  # spilleren rom 1 sendte over
 
-
 func _ready() -> void:
+	## Return er for å playteste uten å være tilkoblet til serveren, ukommenter når det er i prod.
+	await get_tree().create_timer(1.0).timeout
+	$TileMap2.visible = true
+	$Camera2D.screen_shake(20, 0.25)
+	await get_tree().create_timer(12.0).timeout
+	self.remove_child($Camera2D);
+	return
 	client = ControlRoomClient.new("ws://172.31.0.200:7321", 4)
-	#client = ControlRoomClient.new("ws://172.31.0.138:7321", 2)
 	add_child(client)
 	#client.add_loading_screen()
 	# Koble signalene før run(), så ingen blir gått glipp av.

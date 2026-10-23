@@ -1,0 +1,22 @@
+{
+	"lok": {
+		"name": "Løk",
+		"icon": "plassholder.png"
+	},
+	"urter": {
+		"name": "Urter",
+		"icon": "armor.png"
+	},
+	"ingefaer": {
+		"name": "Ingefær",
+		"icon": "armor.png"
+	},
+	"olje": {
+		"name": "Olje",
+		"icon": "armor.png"
+	},
+	"gronnpotion": {
+		"name": "Grønn potion",
+		"icon": "armor.png"
+	},
+}
