@@ -37,6 +37,10 @@ func toggle_state() -> void:
 @onready var hvitlok_popup: Label = $Label
 
 
+func _input(event: InputEvent) -> void:
+	if (player_present):
+		if event.is_action_pressed("ui_accept"):
+			vis_popup_midlertidig()
 		
 func vis_popup_midlertidig() -> void:
 	if hvitlok_popup == null:
