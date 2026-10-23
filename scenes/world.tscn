@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dt0tqb8iq8k7i" path="res://scripts/world.gd" id="1_7r4gi"]
 [ext_resource type="Texture2D" uid="uid://donay14m3txka" path="res://assets/Tile-floor-halloween.png" id="1_71j4m"]
+[ext_resource type="PackedScene" uid="uid://db3741e0lc3nd" path="res://scenes/trapp.tscn" id="2_dss4m"]
 [ext_resource type="PackedScene" uid="uid://cy538ri1sfrt4" path="res://scenes/ShakingCamera.tscn" id="2_xo05s"]
 [ext_resource type="Script" uid="uid://dscilli6g5ik0" path="res://scripts/camera_2d.gd" id="3_dss4m"]
 [ext_resource type="Texture2D" uid="uid://dhe2nixqw7lmb" path="res://assets/student.png" id="3_q5onr"]
@@ -496,6 +497,9 @@ size = Vector2(494, 20)
 y_sort_enabled = true
 script = ExtResource("1_7r4gi")
 
+[node name="trapp" parent="." unique_id=1943372512 instance=ExtResource("2_dss4m")]
+position = Vector2(455, 102)
+
 [node name="Camera2D" parent="." unique_id=308323089 instance=ExtResource("2_xo05s")]
 position = Vector2(77, 65)
 zoom = Vector2(6.8, 6.8)
@@ -561,7 +565,7 @@ shape = SubResource("RectangleShape2D_hvi6i")
 
 [node name="topp" type="CollisionShape2D" parent="Area2D" unique_id=1214509545]
 z_index = 4
-position = Vector2(231, -7.5)
+position = Vector2(231, -12)
 shape = SubResource("RectangleShape2D_6l23f")
 
 [node name="venstre2" type="CollisionShape2D" parent="Area2D" unique_id=116526491]
@@ -569,6 +573,7 @@ position = Vector2(-10, 135)
 shape = SubResource("RectangleShape2D_dx0g6")
 
 [node name="høyre" type="CollisionShape2D" parent="Area2D" unique_id=233488460]
+z_index = 1
 position = Vector2(474, 98.5)
 shape = SubResource("RectangleShape2D_jjg4y")
 

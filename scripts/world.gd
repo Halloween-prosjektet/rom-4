@@ -1,6 +1,5 @@
 
 extends Node2D
-
 var client: ControlRoomClient
 var player_name := ""  # spilleren rom 1 sendte over
 
