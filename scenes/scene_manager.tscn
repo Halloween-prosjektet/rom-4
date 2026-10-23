@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://7lwig5l4rhp"]
+
+[ext_resource type="Script" uid="uid://wxhos83li0yo" path="res://scripts/scene_manager.gd" id="1_b81s6"]
+[ext_resource type="PackedScene" uid="uid://dkbchdyyrqux0" path="res://scenes/transition.tscn" id="3_q7wi7"]
+
+[node name="SceneManager" type="Node2D" unique_id=1216293774]
+script = ExtResource("1_b81s6")
+
+[node name="CurrentScene" type="Node2D" parent="." unique_id=2007977432]
+
+[node name="CenterContainer" type="CenterContainer" parent="CurrentScene" unique_id=1441939075]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Transition" parent="." unique_id=1702814310 instance=ExtResource("3_q7wi7")]
+
+[connection signal="transitioned" from="Transition" to="." method="_on_transition_transitioned"]

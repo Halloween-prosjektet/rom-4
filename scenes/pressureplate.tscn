@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://emhpqup30n0y" path="res://scripts/pressureplate.gd" id="1_a8gjs"]
 [ext_resource type="Texture2D" uid="uid://bl3l7vvmrogfb" path="res://assets/pressureplate.png" id="2_a8gjs"]
-[ext_resource type="Texture2D" uid="uid://cyooniarma82k" path="res://assets/banadog2.jpg" id="3_0rdfg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6l23f"]
 animations = [{
@@ -16,7 +15,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_0rdfg")
+"texture": ExtResource("2_a8gjs")
 }],
 "loop": 1,
 "name": &"on",
@@ -30,9 +29,11 @@ size = Vector2(12, 12)
 script = ExtResource("1_a8gjs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=215867143]
-scale = Vector2(0.10417967, 0.10417967)
+position = Vector2(-1.013279e-06, -8.940697e-07)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_6l23f")
-animation = &"off"
+animation = &"on"
+frame_progress = 0.40621063
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1943410001]
 shape = SubResource("RectangleShape2D_dx0g6")

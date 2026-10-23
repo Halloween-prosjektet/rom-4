@@ -3,18 +3,15 @@ extends CharacterBody2D
 
 const speed = 100
 var current_dir = "none"
-var can_move:bool = true
+var can_move:bool = false
 
 
 func _physics_process(delta):
-	player_movement(delta)
 	if can_move:
-		$AnimatedSprite2D.play("front_idle")
-		return
+		return player_movement(delta)
 
 ##player animations
 func player_movement(delta):
-	
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
 		play_anim(1)
@@ -74,3 +71,10 @@ func play_anim(movement):
 		
 func _ready() -> void:
 	add_to_group("player")
+	$AnimationPlayer.play("opening_walk")
+	await get_tree().create_timer(1.0).timeout
+	$Node2D.visible = true
+	await get_tree().create_timer(12.0).timeout
+	$Node2D.visible = false
+	can_move = true
+	return
