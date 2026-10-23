@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://db3741e0lc3nd"]
+
+[ext_resource type="Script" uid="uid://b2mowkeod24y4" path="res://scripts/trapp.gd" id="1_wv16d"]
+[ext_resource type="Texture2D" uid="uid://doqhvwrabk7yh" path="res://assets/stair.png" id="2_fp4mw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6l23f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fp4mw")
+}],
+"loop": 1,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fp4mw")
+}],
+"loop": 1,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6l23f"]
+size = Vector2(33, 75)
+
+[node name="trapp" type="Area2D" unique_id=1943372512]
+script = ExtResource("1_wv16d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1763630701]
+sprite_frames = SubResource("SpriteFrames_6l23f")
+animation = &"off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1097195905]
+position = Vector2(1.5, 5.5)
+shape = SubResource("RectangleShape2D_6l23f")

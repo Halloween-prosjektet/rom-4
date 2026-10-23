@@ -45,7 +45,3 @@ func _on_game_finish_wait(max_wait: Variant) -> void:
 
 func _on_game_finish_ok() -> void:
 	print("Klart! Spilleren kan gå videre til rom 3.")
-
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept"):
-		player_won() 

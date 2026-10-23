@@ -158,13 +158,7 @@ script = ExtResource("1_g2els")
 y_sort_enabled = true
 position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_u8vuu")
-<<<<<<< HEAD
 animation = &"side_walk"
-frame_progress = 0.07617577
-=======
-animation = &"side_idle"
-frame_progress = 0.16284853
->>>>>>> 7e1bf621aa36b9df21af3f4caa206a973d43975a
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2012625104]
 position = Vector2(0, 1)

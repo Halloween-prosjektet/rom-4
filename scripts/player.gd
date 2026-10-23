@@ -1,22 +1,5 @@
 extends CharacterBody2D
 
-<<<<<<< HEAD
-const SPEED = 100
-var current_dir = "down"
-var can_move: bool = true
-
-
-func _physics_process(_delta):
-	if can_move:
-		player_movement()
-	else:
-		velocity = Vector2.ZERO
-		move_and_slide()
-		$AnimatedSprite2D.play("front_idle")
-
-
-func player_movement():
-=======
 
 const speed = 100
 var current_dir = "none"
@@ -29,48 +12,36 @@ func _physics_process(delta):
 
 ##player animations
 func player_movement(delta):
->>>>>>> 7e1bf621aa36b9df21af3f4caa206a973d43975a
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
-		velocity = Vector2(SPEED, 0)
 		play_anim(1)
+		velocity.x= speed
+		velocity.y= 0
 	elif Input.is_action_pressed("ui_left"):
 		current_dir = "left"
-		velocity = Vector2(-SPEED, 0)
 		play_anim(1)
+		velocity.x= -speed
+		velocity.y= 0
 	elif Input.is_action_pressed("ui_down"):
 		current_dir = "down"
-		velocity = Vector2(0, SPEED)
 		play_anim(1)
+		velocity.y= speed
+		velocity.x= 0
 	elif Input.is_action_pressed("ui_up"):
-		current_dir = "up"
-		velocity = Vector2(0, -SPEED)
+		current_dir= "up"
 		play_anim(1)
+		velocity.y= -speed
+		velocity.x= 0
 	else:
-		velocity = Vector2.ZERO
 		play_anim(0)
-
+		velocity.y=0
+		velocity.x=0
+		
 	move_and_slide()
-
-
-func play_anim(movement: int) -> void:
+	
+func play_anim(movement):
+	var dir = current_dir
 	var anim = $AnimatedSprite2D
-<<<<<<< HEAD
-
-	match current_dir:
-		"right":
-			anim.flip_h = false
-			anim.play("side_walk" if movement == 1 else "side_idle")
-		"left":
-			anim.flip_h = true
-			anim.play("side_walk" if movement == 1 else "side_idle")
-		"down":
-			anim.flip_h = false
-			anim.play("front_walk" if movement == 1 else "front_idle")
-		"up":
-			anim.flip_h = false
-			anim.play("back_walk" if movement == 1 else "back_idle")
-=======
 	
 	if dir == "right":
 		anim.flip_h=false
@@ -107,4 +78,3 @@ func _ready() -> void:
 	$Node2D.visible = false
 	can_move = true
 	return
->>>>>>> 7e1bf621aa36b9df21af3f4caa206a973d43975a
