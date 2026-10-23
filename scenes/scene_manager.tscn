@@ -6,6 +6,15 @@
 [node name="SceneManager" type="Node2D" unique_id=1216293774]
 script = ExtResource("1_b81s6")
 
+[node name="Label" type="Label" parent="." unique_id=207380245]
+visibility_layer = 524303
+offset_left = 512.0
+offset_top = 312.0
+offset_right = 639.0
+offset_bottom = 335.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Venter på spiller"
+
 [node name="CurrentScene" type="Node2D" parent="." unique_id=2007977432]
 
 [node name="CenterContainer" type="CenterContainer" parent="CurrentScene" unique_id=1441939075]
